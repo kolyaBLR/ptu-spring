@@ -1,0 +1,66 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="by.bsuir"/>
+
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="by.bsuir.converters.TimestampConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:message"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC"/>
+        <property name="username" value="user"/>
+        <property name="password" value="password"/>
+    </bean>
+
+    <bean id="hibernate5AnnotatedSessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>by.bsuir.db.baseuser.BaseUser</value>
+                <value>by.bsuir.db.enterprise.Enterprise</value>
+                <value>by.bsuir.db.enterpriseproduct.EnterpriseProduct</value>
+                <value>by.bsuir.db.nameditem.NamedItem</value>
+                <value>by.bsuir.db.password.Password</value>
+                <value>by.bsuir.db.product.Product</value>
+                <value>by.bsuir.db.project.Project</value>
+                <value>by.bsuir.db.projectproduct.ProjectProduct</value>
+                <value>by.bsuir.db.projecttop.ProjectTop</value>
+                <value>by.bsuir.db.tag.Tag</value>
+                <value>by.bsuir.db.taggeditem.TaggedItem</value>
+                <value>by.bsuir.db.ban.Ban</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager"><property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/></bean>
+
+    <bean id="authManager" class="by.bsuir.auth.AuthManagerImpl"/>
+</beans>
