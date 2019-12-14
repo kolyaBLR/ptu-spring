@@ -23,8 +23,7 @@ public class LoginController {
     private LoginService loginService;
 
     @InitBinder
-    protected void initBinder(WebDataBinder binder)
-    {
+    protected void initBinder(WebDataBinder binder) {
         binder.addValidators(new Validator() {
             @Override
             public boolean supports(Class<?> aClass) {
@@ -40,19 +39,17 @@ public class LoginController {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
-    public String login(ModelMap modelMap)
-    {
+    public String login(ModelMap modelMap) {
         modelMap.put("loginModel", new LoginModel());
         modelMap.put("title", "Вход");
         return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String doLogin(@Validated @ModelAttribute("loginModel") LoginModel loginModel, BindingResult result,
-                          HttpSession session, Model model)
-    {
-        if (result.hasErrors())
-        {
+    public String doLogin(
+            @Validated @ModelAttribute("loginModel") LoginModel loginModel,
+            BindingResult result, HttpSession session, Model model) {
+        if (result.hasErrors()) {
             model.addAttribute("loginModel", loginModel);
             model.addAttribute("title", "Вход");
             return "login";
@@ -65,14 +62,12 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public String logout(HttpSession httpSession)
-    {
+    public String logout(HttpSession httpSession) {
         loginService.logout(httpSession);
         return "redirect:/home";
     }
 
-    public static class LoginModel
-    {
+    public static class LoginModel {
         private String login;
         private String password;
 

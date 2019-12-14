@@ -1,6 +1,7 @@
 package by.bsuir;
 
 import by.bsuir.db.baseuser.BaseUser;
+import by.bsuir.db.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Controller;
@@ -31,19 +32,19 @@ public class RegisterController {
     public String register(Model model)
     {
         model.addAttribute("title", "Регистрация");
-        model.addAttribute("userModel", new BaseUser());
+        model.addAttribute("userModel", new User());
         return "register";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String doRegister(@Validated @ModelAttribute("userModel") BaseUser baseUser, BindingResult result, Model model)
+    public String doRegister(@Validated @ModelAttribute("userModel") User user, BindingResult result, Model model)
     {
         if (!result.hasErrors()) {
-            registerService.registerUser(baseUser);
+            registerService.registerUser(user);
             return "redirect:/home";
         } else {
             model.addAttribute("title", "Регистрация");
-            model.addAttribute("userModel", baseUser);
+            model.addAttribute("userModel", user);
             return "register";
         }
     }

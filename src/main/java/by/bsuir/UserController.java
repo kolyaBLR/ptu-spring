@@ -3,6 +3,7 @@ package by.bsuir;
 import by.bsuir.db.ban.Ban;
 import by.bsuir.db.baseuser.BaseUser;
 import by.bsuir.db.baseuser.BaseUserType;
+import by.bsuir.db.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Controller;
@@ -27,15 +28,14 @@ public class UserController {
     private EnterpriseService enterpriseService;
 
     @InitBinder(value = "userModel")
-    protected void initBinder(WebDataBinder webDataBinder)
-    {
+    protected void initBinder(WebDataBinder webDataBinder) {
         webDataBinder.setConversionService(conversionService);
         webDataBinder.addValidators(RegisterService.getUserValidator(registerService));
     }
 
     @RequestMapping(value = "/user/{login}", method = RequestMethod.GET)
     public String userPage(@PathVariable("login") String login, Model model, HttpSession session) {
-        BaseUser user = userService.getUser(login);
+        User user = userService.getUser(login);
         if (user == null)
             return "user";
         model.addAttribute("user", user);
@@ -44,25 +44,14 @@ public class UserController {
         model.addAttribute("currentUserObj", userService.getActiveUser(session));
         model.addAttribute("ban", userService.getBan(user));
 
-        switch (user.getType())
-        {
-            case "admin":
-                adminPage(model);
-                break;
-            case "moderator":
-                moderatorPage(model);
-                break;
-            case "enterpreneur":
-                model.addAttribute("enterprises", enterpriseService.getAllFor(user));
-                break;
-        }
+        //model.addAttribute("enterprises", enterpriseService.getAllFor(user));
 
         return "user";
     }
 
     @RequestMapping(value = "/user/{login}/ban", method = RequestMethod.GET)
     public String ban(@PathVariable("login") String login, Model model, HttpSession session) {
-        BaseUser user = userService.getUser(login);
+        User user = userService.getUser(login);
         if (user == null)
             return "redirect:/user/" + login;
 
@@ -74,7 +63,7 @@ public class UserController {
     @RequestMapping(value = "/user/{login}/ban", method = RequestMethod.POST)
     public String doBan(@PathVariable("login") String login, Model model, HttpSession session,
                         @ModelAttribute("banModel") Ban ban, BindingResult bindingResult) {
-        BaseUser user = userService.getUser(login);
+        User user = userService.getUser(login);
         if (user == null)
             return "redirect:/user/" + login;
 
@@ -88,8 +77,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/admin/createModer", method = RequestMethod.GET)
-    public String createModer(Model model)
-    {
+    public String createModer(Model model) {
         model.addAttribute("title", "Создать модератора");
         model.addAttribute("userModel", new BaseUser());
         return "createModer";
@@ -97,28 +85,17 @@ public class UserController {
 
     @RequestMapping(value = "/admin/createModer", method = RequestMethod.POST)
     public String createModerPost(Model model, HttpSession httpSession,
-                                  @Validated @ModelAttribute("userModel") BaseUser baseUser, BindingResult bindingResult)
-    {
-        BaseUser user = userService.getActiveUser(httpSession);
-        if (user == null || !user.getType().equals(BaseUserType.admin.value))
-            return "redirect:/login";
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("title", "Создать модератора");
-            model.addAttribute("userModel", baseUser);
-            return "createModer";
-        } else {
-            registerService.registerUser(baseUser);
-            return "redirect:/user/" + baseUser.getLogin();
-        }
+                                  @Validated @ModelAttribute("userModel") User user, BindingResult bindingResult) {
+        User activeUser = userService.getActiveUser(httpSession);//TODO ????
+        registerService.registerUser(user);
+        return "redirect:/user/" + user.getLogin();
     }
 
-    private void adminPage(Model model)
-    {
+    private void adminPage(Model model) {
         //
     }
 
-    private void moderatorPage(Model model)
-    {
+    private void moderatorPage(Model model) {
         model.addAttribute("notApprovedEnterprises", enterpriseService.getAllNotApproved());
     }
 }

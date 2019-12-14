@@ -1,3 +1,4 @@
+/*
 package by.bsuir;
 
 import by.bsuir.db.baseuser.BaseUser;
@@ -186,3 +187,4 @@ public class EnterpriseController {
         }
     }
 }
+*/

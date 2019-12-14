@@ -1,3 +1,4 @@
+/*
 package by.bsuir;
 
 import by.bsuir.db.baseuser.BaseUser;
@@ -127,3 +128,4 @@ public class ProjectController {
         return "redirect:/project/" + project.getId();
     }
 }
+*/

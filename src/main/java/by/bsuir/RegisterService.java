@@ -4,6 +4,9 @@ import by.bsuir.db.baseuser.BaseUser;
 import by.bsuir.db.baseuser.BaseUserDAO;
 import by.bsuir.db.password.PasswordDAO;
 import by.bsuir.db.taggeditem.TaggedItem;
+import by.bsuir.db.user.User;
+import by.bsuir.db.user.UserDAO;
+import by.bsuir.db.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,21 +18,14 @@ import org.springframework.validation.Validator;
 @Transactional
 public class RegisterService {
     @Autowired
-    private BaseUserDAO baseUserDAO;
-    @Autowired
-    private PasswordDAO passwordDAO;
+    private UserRepository userRepository;
 
-    public void registerUser(BaseUser baseUser)
-    {
-        baseUser.setLogin(baseUser.getPassword().getLogin());
-        baseUser.setTaggedItem(new TaggedItem());
-        baseUserDAO.create(baseUser);
-        passwordDAO.create(baseUser.getPassword());
+    public void registerUser(User user) {
+        userRepository.create(user);
     }
 
-    public boolean hasUser(String login)
-    {
-        return baseUserDAO.read(login, BaseUser.class) != null;
+    public boolean hasUser(String login) {
+        return userRepository.read(login, User.class) != null;
     }
 
     public static Validator getUserValidator(final RegisterService registerService) {
@@ -41,18 +37,14 @@ public class RegisterService {
 
             @Override
             public void validate(Object o, Errors errors) {
-                for (String field : new String[]{"password.login", "password.password", "namedItem.name", "surname", "email"})
+                for (String field : new String[]{"user.login", "user.password"})
                     ValidationUtils.rejectIfEmptyOrWhitespace(errors, field, "field.empty");
 
-                BaseUser baseUser = (BaseUser) o;
-                if (!baseUser.getEmail().matches("(\\w+)@(\\w+).(\\w+)"))
-                    errors.rejectValue("email", "field.invalid");
-                if (!baseUser.getPassword().getLogin().matches("\\w+"))
-                    errors.rejectValue("password.login", "field.invalid");
-                if (baseUser.getBirthDay() == null)
-                    errors.rejectValue("birthDay", "field.invalid");
-                if (registerService.hasUser(baseUser.getPassword().getLogin()))
-                    errors.rejectValue("password.login", "field.taken");
+                User user = (User) o;
+                if (!user.getLogin().matches("\\w+"))
+                    errors.rejectValue("user.login", "field.invalid");
+                if (registerService.hasUser(user.getLogin()))
+                    errors.rejectValue("user.login", "field.taken");
             }
         };
     }
