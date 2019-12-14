@@ -1,12 +1,15 @@
 package by.bsuir;
 
-import by.bsuir.db.baseuser.BaseUser;
 import by.bsuir.db.user.User;
+import by.bsuir.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.*;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -29,18 +32,19 @@ public class RegisterController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String register(Model model)
-    {
+    public String register(Model model) {
         model.addAttribute("title", "Регистрация");
-        model.addAttribute("userModel", new User());
+        model.addAttribute("userModel", new UserModel());
         return "register";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String doRegister(@Validated @ModelAttribute("userModel") User user, BindingResult result, Model model)
-    {
+    public String doRegister(@Validated @ModelAttribute("userModel") UserModel user, BindingResult result, Model model) {
         if (!result.hasErrors()) {
-            registerService.registerUser(user);
+            User entity = new User();
+            entity.setLogin(user.getLogin());
+            entity.setPassword(user.getPassword());
+            registerService.registerUser(entity);
             return "redirect:/home";
         } else {
             model.addAttribute("title", "Регистрация");
@@ -49,4 +53,10 @@ public class RegisterController {
         }
     }
 
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("/WEB-INF/messages");
+        return messageSource;
+    }
 }

@@ -16,7 +16,8 @@
         </property>
     </bean>
 
-    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basename" value="classpath:message"/>
         <property name="defaultEncoding" value="UTF-8"/>
     </bean>
@@ -37,18 +38,8 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>by.bsuir.db.baseuser.BaseUser</value>
-                <value>by.bsuir.db.enterprise.Enterprise</value>
-                <value>by.bsuir.db.enterpriseproduct.EnterpriseProduct</value>
-                <value>by.bsuir.db.nameditem.NamedItem</value>
-                <value>by.bsuir.db.password.Password</value>
-                <value>by.bsuir.db.product.Product</value>
-                <value>by.bsuir.db.project.Project</value>
-                <value>by.bsuir.db.projectproduct.ProjectProduct</value>
-                <value>by.bsuir.db.projecttop.ProjectTop</value>
-                <value>by.bsuir.db.tag.Tag</value>
-                <value>by.bsuir.db.taggeditem.TaggedItem</value>
-                <value>by.bsuir.db.ban.Ban</value>
+                <value>by.bsuir.db.user.User</value>
+                <value>by.bsuir.db.company.Company</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -60,7 +51,8 @@
     </bean>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
-    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager"><property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/></bean>
-
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
+    </bean>
     <bean id="authManager" class="by.bsuir.auth.AuthManagerImpl"/>
 </beans>

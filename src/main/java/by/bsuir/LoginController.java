@@ -1,5 +1,6 @@
 package by.bsuir;
 
+import by.bsuir.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +28,7 @@ public class LoginController {
         binder.addValidators(new Validator() {
             @Override
             public boolean supports(Class<?> aClass) {
-                return LoginModel.class.equals(aClass);
+                return UserModel.class.equals(aClass);
             }
 
             @Override
@@ -40,14 +41,14 @@ public class LoginController {
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public String login(ModelMap modelMap) {
-        modelMap.put("loginModel", new LoginModel());
+        modelMap.put("loginModel", new UserModel());
         modelMap.put("title", "Вход");
         return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String doLogin(
-            @Validated @ModelAttribute("loginModel") LoginModel loginModel,
+            @Validated @ModelAttribute("loginModel") UserModel loginModel,
             BindingResult result, HttpSession session, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("loginModel", loginModel);
@@ -65,26 +66,5 @@ public class LoginController {
     public String logout(HttpSession httpSession) {
         loginService.logout(httpSession);
         return "redirect:/home";
-    }
-
-    public static class LoginModel {
-        private String login;
-        private String password;
-
-        public String getLogin() {
-            return login;
-        }
-
-        public void setLogin(String login) {
-            this.login = login;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
     }
 }

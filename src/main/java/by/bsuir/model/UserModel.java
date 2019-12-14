@@ -1,19 +1,7 @@
-package by.bsuir.db.user;
+package by.bsuir.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "user")
-public class User {
-
-    @Id
-    @Column(name = "login")
+public class UserModel {
     private String login;
-
-    @Column(name = "password")
     private String password;
 
     public String getLogin() {

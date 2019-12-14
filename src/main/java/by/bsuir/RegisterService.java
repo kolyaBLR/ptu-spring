@@ -1,12 +1,8 @@
 package by.bsuir;
 
-import by.bsuir.db.baseuser.BaseUser;
-import by.bsuir.db.baseuser.BaseUserDAO;
-import by.bsuir.db.password.PasswordDAO;
-import by.bsuir.db.taggeditem.TaggedItem;
 import by.bsuir.db.user.User;
-import by.bsuir.db.user.UserDAO;
 import by.bsuir.db.user.UserRepository;
+import by.bsuir.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,19 +28,19 @@ public class RegisterService {
         return new Validator() {
             @Override
             public boolean supports(Class<?> aClass) {
-                return BaseUser.class.equals(aClass);
+                return UserModel.class.equals(aClass);
             }
 
             @Override
             public void validate(Object o, Errors errors) {
-                for (String field : new String[]{"user.login", "user.password"})
+                for (String field : new String[]{"login", "password"})
                     ValidationUtils.rejectIfEmptyOrWhitespace(errors, field, "field.empty");
 
-                User user = (User) o;
+                UserModel user = (UserModel) o;
                 if (!user.getLogin().matches("\\w+"))
-                    errors.rejectValue("user.login", "field.invalid");
+                    errors.rejectValue("login", "field.invalid");
                 if (registerService.hasUser(user.getLogin()))
-                    errors.rejectValue("user.login", "field.taken");
+                    errors.rejectValue("login", "field.taken");
             }
         };
     }

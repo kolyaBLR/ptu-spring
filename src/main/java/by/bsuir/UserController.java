@@ -1,14 +1,10 @@
 package by.bsuir;
 
-import by.bsuir.db.ban.Ban;
-import by.bsuir.db.baseuser.BaseUser;
-import by.bsuir.db.baseuser.BaseUserType;
 import by.bsuir.db.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
@@ -24,8 +20,6 @@ public class UserController {
     private UserService userService;
     @Autowired
     private ConversionService conversionService;
-    @Autowired
-    private EnterpriseService enterpriseService;
 
     @InitBinder(value = "userModel")
     protected void initBinder(WebDataBinder webDataBinder) {
@@ -42,7 +36,6 @@ public class UserController {
         model.addAttribute("title", String.format("Крауд-пользователь %s", user.getLogin()));
         model.addAttribute("currentUser", userService.isActiveUser(user, session));
         model.addAttribute("currentUserObj", userService.getActiveUser(session));
-        model.addAttribute("ban", userService.getBan(user));
 
         //model.addAttribute("enterprises", enterpriseService.getAllFor(user));
 
@@ -56,22 +49,18 @@ public class UserController {
             return "redirect:/user/" + login;
 
         model.addAttribute("title", "Заблокировать пользователя");
-        model.addAttribute("banModel", new Ban());
         return "ban";
     }
 
     @RequestMapping(value = "/user/{login}/ban", method = RequestMethod.POST)
     public String doBan(@PathVariable("login") String login, Model model, HttpSession session,
-                        @ModelAttribute("banModel") Ban ban, BindingResult bindingResult) {
+                        BindingResult bindingResult) {
         User user = userService.getUser(login);
         if (user == null)
             return "redirect:/user/" + login;
 
         if (bindingResult.hasErrors()) {
             model.addAttribute("title", "Заблокировать пользователя");
-            model.addAttribute("banModel", ban);
-        } else {
-            userService.tryToBan(user, ban.getReason(), session);
         }
         return "redirect:/user/" + login;
     }
@@ -79,7 +68,6 @@ public class UserController {
     @RequestMapping(value = "/admin/createModer", method = RequestMethod.GET)
     public String createModer(Model model) {
         model.addAttribute("title", "Создать модератора");
-        model.addAttribute("userModel", new BaseUser());
         return "createModer";
     }
 
@@ -89,13 +77,5 @@ public class UserController {
         User activeUser = userService.getActiveUser(httpSession);//TODO ????
         registerService.registerUser(user);
         return "redirect:/user/" + user.getLogin();
-    }
-
-    private void adminPage(Model model) {
-        //
-    }
-
-    private void moderatorPage(Model model) {
-        model.addAttribute("notApprovedEnterprises", enterpriseService.getAllNotApproved());
     }
 }
