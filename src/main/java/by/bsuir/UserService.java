@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Service
 @Transactional
@@ -23,6 +24,10 @@ public class UserService {
 
     public boolean isActiveUser(User baseUser, HttpSession httpSession) {
         return baseUser.getLogin().equals(authManager.checkAuth(httpSession));
+    }
+
+    public List<User> getUsers() {
+        return  userRepository.readAll(User.class);
     }
 
     public User getActiveUser(HttpSession httpSession) {

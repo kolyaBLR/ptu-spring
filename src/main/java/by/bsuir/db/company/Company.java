@@ -1,9 +1,6 @@
 package by.bsuir.db.company;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "company")
@@ -19,8 +16,8 @@ public class Company {
     @Column(name = "cost")
     private int cost;
 
-    @Column(name = "idUser")
-    private int userId;
+    @Column(name = "login")
+    private String userLogin;
 
     public int getId() {
         return id;
@@ -46,11 +43,11 @@ public class Company {
         this.cost = cost;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getUserLogin() {
+        return userLogin;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
     }
 }

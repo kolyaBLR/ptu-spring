@@ -65,6 +65,6 @@ public class LoginController {
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout(HttpSession httpSession) {
         loginService.logout(httpSession);
-        return "redirect:/home";
+        return "redirect:/login";
     }
 }
