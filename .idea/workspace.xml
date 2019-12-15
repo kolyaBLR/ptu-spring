@@ -7,89 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/Equipment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/EquipmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/Placement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/PlacementRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/model/CompanyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company_show.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/SimpleCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/SimpleCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/company/CompanyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/company/CompanyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/companyinfo/CompanyInfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/companyinfo/CompanyInfoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/employee/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/employee/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/equipment/EquipmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/equipment/EquipmentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/placement/PlacementRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/placement/PlacementRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/product/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/product/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/user/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/user/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/company.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/SimpleCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/SimpleCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/company/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/company/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/EquipmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/EquipmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/PlacementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/PlacementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/user/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/HelloWeb-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/META-INF/CrowdProjects.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/RegisterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/RegisterService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/RegisterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/auth/AuthManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/auth/AuthManagerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/converters/TimestampConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/db/CRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/db/SimpleCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/message_ru.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/fragments/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/fragments/head.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/fragments/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/user.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/byte-buddy-1.10.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/hibernate-core-5.4.9.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/hibernate-entitymanager-5.4.9.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jandex-2.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/javassist-3.24.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/mysql-connector-java-8.0.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-orm-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/bsuir/db/SimpleCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/bsuir/db/SimpleCRUD.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +55,13 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -229,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576407373847</updated>
       <workItem from="1576407375843" duration="22000" />
-      <workItem from="1576407430540" duration="4400000" />
+      <workItem from="1576407430540" duration="9429000" />
     </task>
     <servers />
   </component>
@@ -248,5 +200,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -48,8 +48,20 @@ public class CompanyService {
         return companyRepository.readAll(Company.class);
     }
 
-    public Company getCompany(int companyId) {
-        return companyRepository.read(companyId, Company.class);
+    public CompanyModel getCompany(int companyId, String login) {
+        CompanyModel companyModel = new CompanyModel();
+        Company company = companyRepository.read(companyId, Company.class);
+        if (company != null && company.getUserLogin().equals(login)) {
+            companyModel.setCompany(company);
+            companyModel.setCompanyInfo(companyInfoRepository.findFirst(companyId));
+            companyModel.setPlacement(placementRepository.findFirst(companyId));
+            companyModel.setEquipment(equipmentRepository.findFirst(companyId));
+            companyModel.setProduct(productRepository.findFirst(companyId));
+            companyModel.setEmployee(employeeRepository.findFirst(companyId));
+            return companyModel;
+        } else {
+            return null;
+        }
     }
 
     public List<Company> findAll(String login) {
@@ -66,12 +78,12 @@ public class CompanyService {
     public void delete(int id) {
         Company company = companyRepository.read(id, Company.class);
         if (company != null) {
-            companyRepository.delete(company.getId(), Company.class);
-            companyInfoRepository.delete(company.getUserLogin(), CompanyInfo.class);
-            placementRepository.delete(company.getUserLogin(), Placement.class);
-            equipmentRepository.delete(company.getUserLogin(), Equipment.class);
-            productRepository.delete(company.getUserLogin(), Product.class);
-            employeeRepository.delete(company.getUserLogin(), Employee.class);
+            companyInfoRepository.delete(companyInfoRepository.findFirst(id).getId(), CompanyInfo.class);
+            placementRepository.delete(placementRepository.findFirst(id).getId(), Placement.class);
+            equipmentRepository.delete(equipmentRepository.findFirst(id).getId(), Equipment.class);
+            productRepository.delete(productRepository.findFirst(id).getId(), Product.class);
+            employeeRepository.delete(employeeRepository.findFirst(id).getId(), Employee.class);
+            companyRepository.delete(id, Company.class);
         }
     }
 
@@ -94,6 +106,7 @@ public class CompanyService {
         if (company.getCompany().getId() == 0) {
             int companyId = Math.abs(random.nextInt());
             company.getCompany().setId(companyId);
+
             company.getCompany().setUserLogin(login);
 
             company.getCompanyInfo().setId(UUID.randomUUID().toString());

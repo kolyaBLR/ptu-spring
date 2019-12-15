@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Repository
-public class SimpleCRUD<Model, Key> implements CRUD<Model, Key>{
+public abstract class SimpleCRUD<Model, Key> implements CRUD<Model, Key> {
     @Autowired
     protected SessionFactory sessionFactory;
 
@@ -16,36 +16,33 @@ public class SimpleCRUD<Model, Key> implements CRUD<Model, Key>{
         this.sessionFactory = sessionFactory;
     }
 
-    public void create(Model model)
-    {
+    public void create(Model model) {
         if (model == null)
             return;
         sessionFactory.getCurrentSession().persist(model);
     }
 
-    public Model read(Key key, Class<Model> modelClass)
-    {
+    public Model read(Key key, Class<Model> modelClass) {
         if (key == null)
             return null;
         return sessionFactory.getCurrentSession().get(modelClass, (Serializable) key);
     }
 
-    public void update(Model model)
-    {
+    public void update(Model model) {
         if (model == null)
             return;
         sessionFactory.getCurrentSession().update(model);
     }
 
-    public void delete(Key key, Class<Model> modelClass)
-    {
+    public void delete(Key key, Class<Model> modelClass) {
         if (key == null)
             return;
         sessionFactory.getCurrentSession().delete(read(key, modelClass));
     }
 
-    public List<Model> readAll(Class<Model> modelClass)
-    {
+    public List<Model> readAll(Class<Model> modelClass) {
         return sessionFactory.getCurrentSession().createQuery("from " + modelClass.getSimpleName()).list();
     }
+
+    public abstract Model findFirst(Integer companyId);
 }

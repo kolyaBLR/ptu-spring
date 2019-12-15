@@ -6,7 +6,7 @@
 <spring:url value="create" var="createCompanyUrl"/>
 <body>
 <div class="container">
-    <h2>${action_name} новую компанию</h2>
+    <h2>${action_name} компанию</h2>
     <form:form method="post" action="${createCompanyUrl}" modelAttribute="companyModel">
 
         <h3 class="form-group">Компания</h3>
@@ -20,40 +20,6 @@
             <form:input path="company.cost" type="number" class="form-control" cssErrorClass="form-control is-invalid"/>
             <form:errors path="company.cost" element="div" class="invalid-feedback"/>
         </div>
-
-        <%--Это необходимо вывести после заполнения формочки как общую информацию о компании--%>
-
-        <%--<h3 class="form-group">Ключевые характеристики компании</h3>
-        <div class="form-group">
-            <form:label path="companyInfo.capital">Капитал</form:label>
-            <form:input path="companyInfo.capital" type="number" class="form-control"
-                        cssErrorClass="form-control is-invalid"/>
-            <form:errors path="companyInfo.capital" element="div" class="invalid-feedback"/>
-        </div>
-        <div class="form-group">
-            <form:label path="companyInfo.dues">Налоги</form:label>
-            <form:input path="companyInfo.dues" type="number" class="form-control"
-                        cssErrorClass="form-control is-invalid"/>
-            <form:errors path="companyInfo.dues" element="div" class="invalid-feedback"/>
-        </div>
-        <div class="form-group">
-            <form:label path="companyInfo.cleanProfit">Чистая прибыль</form:label>
-            <form:input path="companyInfo.cleanProfit" type="number" class="form-control"
-                        cssErrorClass="form-control is-invalid"/>
-            <form:errors path="companyInfo.cleanProfit" element="div" class="invalid-feedback"/>
-        </div>
-        <div class="form-group">
-            <form:label path="companyInfo.amortizationDeduction">Расходы</form:label>
-            <form:input path="companyInfo.amortizationDeduction" type="number" class="form-control"
-                        cssErrorClass="form-control is-invalid"/>
-            <form:errors path="companyInfo.amortizationDeduction" element="div" class="invalid-feedback"/>
-        </div>
-        <div class="form-group">
-            <form:label path="companyInfo.assets">Общеполучаемая прибыль</form:label>
-            <form:input path="companyInfo.assets" type="number" class="form-control"
-                        cssErrorClass="form-control is-invalid"/>
-            <form:errors path="companyInfo.assets" element="div" class="invalid-feedback"/>
-        </div>--%>
 
         <h3 class="form-group">Работники</h3>
         <div class="form-group">

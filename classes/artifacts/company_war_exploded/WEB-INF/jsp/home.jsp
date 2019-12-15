@@ -6,6 +6,7 @@
 <jsp:include page="fragments/head.jsp"/>
 <spring:url value="/logout" var="logoutUrl"/>
 <spring:url value="company/create" var="createCompanyUrl"/>
+<spring:url value="company/show" var="showCompanyUrl"/>
 <body>
 <div class="container">
     <div>
@@ -14,11 +15,12 @@
     </div>
     <div><a href="${createCompanyUrl}">add company</a></div>
     <table>
+        <jsp:useBean id="companies" scope="request" type="java.util.List"/>
         <c:forEach var="company" items="${companies}">
             <tr>
                 <form:form method="post" action="home" modelAttribute="company">
                     <td>
-                        <div>${company.name} стоит ${company.cost}</div>
+                        <div><a href="${showCompanyUrl}/${company.id}">${company.name}</a> стоит ${company.cost}</div>
                         <input name="id" value="${company.id}" type="hidden"/>
                         <input type="submit" value="удалить"/>
                     </td>
