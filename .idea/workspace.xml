@@ -2,26 +2,94 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="CrowdProjects:war exploded" />
+      <artifact name="company:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e7e9622-d5f5-480e-9515-a728aa5b2757" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
+    <list default="true" id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/Equipment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/EquipmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/Placement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/PlacementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/model/CompanyModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/company/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/company/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/bsuir/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/bsuir/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/bsuir/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/bsuir/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HelloWeb-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/HelloWeb-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/META-INF/CrowdProjects.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/RegisterService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/RegisterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/auth/AuthManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/auth/AuthManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/converters/TimestampConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/db/CRUD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/by/bsuir/db/SimpleCRUD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/classes/message_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/fragments/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/fragments/head.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/fragments/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/jsp/user.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/byte-buddy-1.10.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/hibernate-core-5.4.9.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/hibernate-entitymanager-5.4.9.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jandex-2.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/javassist-3.24.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/mysql-connector-java-8.0.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-orm-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CrowdProjects/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,86 +108,8 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="company: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="companyinfo: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="employee: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="equipment: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="placement: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testdb" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="testdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="spring-beans.schema" />
-        <option value="JavaFXApplication" />
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="jsf" />
-        <option value="Class" />
-        <option value="Jsp File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,38 +121,13 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1TmT8IYyMvFJ2JPT3HHAuMpYS7M" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1V14fr82pCYBfJVpexxirG82cVj" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
-      <recent name="C:\Users\ghost_user\IdeaProjects\CrowdProjects\src\main\webapp\WEB-INF\jsp\projects" />
-      <recent name="C:\Users\ghost_user\IdeaProjects\CrowdProjects\src\main" />
-      <recent name="C:\Users\ghost_user\IdeaProjects\CrowdProjects\src\main\java\resources" />
-      <recent name="C:\Users\ghost_user\IdeaProjects\CrowdProjects\src\main\java" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,43 +141,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27">
-    <configuration name="CrowdProjects [clean]" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8082/company_war_exploded/" />
+      <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="CrowdProjects:war exploded">
+        <artifact name="company:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/CrowdProjects_war_exploded" />
+            <option name="CONTEXT_PATH" value="/company_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_CrowdProjects" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_company_2" />
         <option name="HTTP_PORT" value="8082" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -221,7 +163,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50032" />
+        <option name="DEBUG_PORT" value="60547" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -271,89 +213,37 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="CrowdProjects:war exploded" />
+          <artifact name="company:war exploded" />
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Maven.CrowdProjects [clean]" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.27" />
-    </list>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ae9a4855" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7e7e9622-d5f5-480e-9515-a728aa5b2757" name="Default Changelist" comment="" />
-      <created>1574064111458</created>
+      <changelist id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="" />
+      <created>1576407373847</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574064111458</updated>
-      <workItem from="1574064120672" duration="9085000" />
-      <workItem from="1574084188234" duration="7215000" />
-      <workItem from="1574243469205" duration="2442000" />
-      <workItem from="1574266316039" duration="1213000" />
-      <workItem from="1574323790396" duration="22344000" />
-      <workItem from="1574404642722" duration="9724000" />
-      <workItem from="1574432007553" duration="4164000" />
-      <workItem from="1574486270315" duration="1983000" />
-      <workItem from="1574509629002" duration="13028000" />
-      <workItem from="1574594595342" duration="67000" />
-      <workItem from="1574595422257" duration="1165000" />
-      <workItem from="1574600376017" duration="850000" />
-      <workItem from="1574707100123" duration="1992000" />
-      <workItem from="1574744354218" duration="87000" />
-      <workItem from="1575451871090" duration="1520000" />
-      <workItem from="1575618440668" duration="1450000" />
-      <workItem from="1576046695220" duration="4146000" />
-      <workItem from="1576085147121" duration="25825000" />
-      <workItem from="1576154561024" duration="1131000" />
-      <workItem from="1576159566006" duration="35471000" />
-      <workItem from="1576244761340" duration="429000" />
-      <workItem from="1576245936041" duration="873000" />
-      <workItem from="1576247873901" duration="795000" />
-      <workItem from="1576252305947" duration="20000" />
-      <workItem from="1576256440456" duration="826000" />
-      <workItem from="1576257978370" duration="749000" />
-      <workItem from="1576267778922" duration="32310000" />
+      <updated>1576407373847</updated>
+      <workItem from="1576407375843" duration="22000" />
+      <workItem from="1576407430540" duration="4400000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -40,6 +40,11 @@
             <list>
                 <value>by.bsuir.db.user.User</value>
                 <value>by.bsuir.db.company.Company</value>
+                <value>by.bsuir.db.companyinfo.CompanyInfo</value>
+                <value>by.bsuir.db.employee.Employee</value>
+                <value>by.bsuir.db.equipment.Equipment</value>
+                <value>by.bsuir.db.placement.Placement</value>
+                <value>by.bsuir.db.product.Product</value>
             </list>
         </property>
         <property name="hibernateProperties">

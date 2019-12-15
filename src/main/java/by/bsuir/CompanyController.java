@@ -2,6 +2,7 @@ package by.bsuir;
 
 import by.bsuir.db.company.Company;
 import by.bsuir.db.user.User;
+import by.bsuir.model.CompanyModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,7 @@ public class CompanyController {
     @Autowired
     private ConversionService conversionService;
 
-    @InitBinder(value = "company")
+    @InitBinder(value = "companyModel")
     public void userModelBinder(WebDataBinder binder) {
         binder.setConversionService(conversionService);
         binder.addValidators(CompanyService.getCompanyValidator());
@@ -41,25 +42,24 @@ public class CompanyController {
         if (activeUser == null) {
             return "redirect:/login";
         }
-        model.addAttribute("company", new Company());
+        model.addAttribute("companyModel", new CompanyModel());
         model.addAttribute("action_name", "Добавить");
         return "company";
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    String saveCompany(@Validated @ModelAttribute("company") Company company,
+    String saveCompany(@Validated @ModelAttribute("companyModel") CompanyModel company,
                        BindingResult result, HttpSession session, Model model) {
         User activeUser = userService.getActiveUser(session);
         if (activeUser == null) {
             return "redirect:/login";
         }
         if (!result.hasErrors()) {
-            company.setUserLogin(activeUser.getLogin());
-            companyService.insertOrUpdate(company);
-            model.addAttribute("company", company);
+            companyService.insertOrUpdate(company, activeUser.getLogin());
+            model.addAttribute("companyModel", company);
             model.addAttribute("action_name", "Обновить");
         } else {
-            model.addAttribute("company", company);
+            model.addAttribute("companyModel", company);
             model.addAttribute("action_name", "Добавить");
         }
         return "company";
