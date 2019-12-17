@@ -1,5 +1,6 @@
 package by.bsuir;
 
+import by.bsuir.db.Calculator;
 import by.bsuir.db.company.Company;
 import by.bsuir.db.company.CompanyRepository;
 import by.bsuir.db.companyinfo.CompanyInfo;
@@ -96,13 +97,21 @@ public class CompanyService {
 
             @Override
             public void validate(Object o, Errors errors) {
-                /*for (String field : new String[]{"name", "cost"})
-                    ValidationUtils.rejectIfEmptyOrWhitespace(errors, field, "field.empty");*/
+                for (String field : new String[]{
+                        "company.name", "company.cost",
+                        "employee.positionName", "employee.quantity", "employee.middleSalaryForUnit",
+                        "equipment.name", "equipment.quantity", "equipment.amortizationCostOfUnit", "equipment.costOfUnit",
+                        "placement.name", "placement.quantity", "placement.rentPriceForYear", "placement.costOfUnit",
+                        "product.nameProduct", "product.numOfReleaseOf", "product.costRawForUnit", "product.costOfUnit"
+                }) {
+                    ValidationUtils.rejectIfEmptyOrWhitespace(errors, field, "field.empty");
+                }
             }
         };
     }
 
     public void insertOrUpdate(CompanyModel company, String login) {
+        new Calculator().execute(company);
         if (company.getCompany().getId() == 0) {
             int companyId = Math.abs(random.nextInt());
             company.getCompany().setId(companyId);

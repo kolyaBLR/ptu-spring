@@ -73,6 +73,25 @@ public class CompanyController {
         return "company";
     }
 
+    @RequestMapping(value = "create/{companyId}", method = RequestMethod.POST)
+    String saveCompanyWithId(@PathVariable("companyId") Integer companyId,
+                             @Validated @ModelAttribute("companyModel") CompanyModel company,
+                             BindingResult result, HttpSession session, Model model) {
+        User activeUser = userService.getActiveUser(session);
+        if (activeUser == null) {
+            return "redirect:/login";
+        }
+        if (!result.hasErrors()) {
+            companyService.insertOrUpdate(company, activeUser.getLogin());
+            model.addAttribute("companyModel", company);
+            model.addAttribute("action_name", "Обновить");
+        } else {
+            model.addAttribute("companyModel", company);
+            model.addAttribute("action_name", "Добавить");
+        }
+        return "company";
+    }
+
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     String saveCompany(@Validated @ModelAttribute("companyModel") CompanyModel company,
                        BindingResult result, HttpSession session, Model model) {

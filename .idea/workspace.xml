@@ -7,34 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company_show.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CalculatorKotlin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CalculatorTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/SimpleCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/SimpleCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/company/CompanyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/company/CompanyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/companyinfo/CompanyInfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/companyinfo/CompanyInfoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/employee/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/employee/EmployeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/equipment/EquipmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/equipment/EquipmentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/placement/PlacementRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/placement/PlacementRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/product/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/product/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/user/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/db/user/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company.iml" beforeDir="false" afterPath="$PROJECT_DIR$/company.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/SimpleCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/SimpleCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/company/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/company/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/companyinfo/CompanyInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/employee/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/EquipmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/equipment/EquipmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/PlacementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/placement/PlacementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/product/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/db/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/bsuir/db/SimpleCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/bsuir/db/SimpleCRUD.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +43,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,13 +59,32 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1V14fr82pCYBfJVpexxirG82cVj" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="by.bsuir" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -93,7 +98,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27">
+    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="company" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.bsuir.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.bsuir" />
+      <option name="MAIN_CLASS_NAME" value="by.bsuir.CalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8082/company_war_exploded/" />
       <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
@@ -169,6 +189,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CalculatorTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -181,7 +206,8 @@
       <option name="presentableId" value="Default" />
       <updated>1576407373847</updated>
       <workItem from="1576407375843" duration="22000" />
-      <workItem from="1576407430540" duration="9429000" />
+      <workItem from="1576407430540" duration="10426000" />
+      <workItem from="1576604530726" duration="9799000" />
     </task>
     <servers />
   </component>
@@ -200,21 +226,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
