@@ -8,45 +8,44 @@
 <div class="container">
     <h2>Ваша компания <a href="${createCompanyUrl}/${companyModel.company.id}">${companyModel.company.name}</a> стоит ${companyModel.company.cost}</h2>
 
-    <h3>companyInfo</h3>
+    <h3>Информация о компании</h3>
     <div class="form-group">
-        <div>amortizationDeduction ${companyModel.companyInfo.amortizationDeduction}</div>
-        <div>assets ${companyModel.companyInfo.assets}</div>
-        <div>capital ${companyModel.companyInfo.capital}</div>
-        <div>cleanProfit ${companyModel.companyInfo.cleanProfit}</div>
-        <div>dues ${companyModel.companyInfo.dues}</div>
+        <div>Амортизационные расходы ${companyModel.companyInfo.amortizationDeduction}</div>
+        <div>Активы ${companyModel.companyInfo.assets}</div>
+        <div>Капитал ${companyModel.companyInfo.capital}</div>
+        <div>Чистая прибыль ${companyModel.companyInfo.cleanProfit}</div>
+        <div>Налоги ${companyModel.companyInfo.dues}</div>
     </div>
 
-    <h3>employee</h3>
+    <h3>Работники</h3>
     <div class="form-group">
-        <div>middleSalaryForUnit ${companyModel.employee.middleSalaryForUnit}</div>
-        <div>positionName ${companyModel.employee.positionName}</div>
-        <div>quantity ${companyModel.employee.quantity}</div>
-        <div>dues ${companyModel.companyInfo.dues}</div>
+        <div>Средняя зарплата по должности ${companyModel.employee.middleSalaryForUnit}</div>
+        <div>Должность ${companyModel.employee.positionName}</div>
+        <div>Количество работников ${companyModel.employee.quantity}</div>
     </div>
 
-    <h3>equipment</h3>
+    <h3>Оборудование</h3>
     <div class="form-group">
-        <div>quantity ${companyModel.equipment.quantity}</div>
-        <div>name ${companyModel.equipment.name}</div>
-        <div>amortizationCostOfUnit ${companyModel.equipment.amortizationCostOfUnit}</div>
-        <div>costOfUnit ${companyModel.equipment.costOfUnit}</div>
+        <div>Наименование ${companyModel.equipment.name}</div>
+        <div>Количество ${companyModel.equipment.quantity}</div>
+        <div>Стоимость содержания ${companyModel.equipment.amortizationCostOfUnit}</div>
+        <div>Стоимость оборудования${companyModel.equipment.costOfUnit}</div>
     </div>
 
-    <h3>placement</h3>
+    <h3>Помещения</h3>
     <div class="form-group">
-        <div>costOfUnit ${companyModel.placement.costOfUnit}</div>
-        <div>name ${companyModel.placement.name}</div>
-        <div>quantity ${companyModel.placement.quantity}</div>
-        <div>rentPriceForYear ${companyModel.placement.rentPriceForYear}</div>
+        <div>Наименование ${companyModel.placement.name}</div>
+        <div>Стоимость ${companyModel.placement.costOfUnit}</div>
+        <div>Количество ${companyModel.placement.quantity}</div>
+        <div>Стоимость содержания помещения${companyModel.placement.rentPriceForYear}</div>
     </div>
 
-    <h3>product</h3>
+    <h3>Продукт</h3>
     <div class="form-group">
-        <div>costOfUnit ${companyModel.product.costOfUnit}</div>
-        <div>costRawForUnit ${companyModel.product.costRawForUnit}</div>
-        <div>nameProduct ${companyModel.product.nameProduct}</div>
-        <div>numOfReleaseOf ${companyModel.product.numOfReleaseOf}</div>
+        <div>Название ${companyModel.product.nameProduct}</div>
+        <div>Стоимость с реализации ${companyModel.product.costOfUnit}</div>
+        <div>Стомость производства ${companyModel.product.costRawForUnit}</div>
+        <div>Количество выпущенной продукции${companyModel.product.numOfReleaseOf}</div>
     </div>
 </div>
 <jsp:include page="fragments/footer.jsp"/>

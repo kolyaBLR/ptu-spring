@@ -7,17 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CalculatorKotlin.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CalculatorTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/db/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company.iml" beforeDir="false" afterPath="$PROJECT_DIR$/company.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company_show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company_show.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +197,7 @@
       <updated>1576407373847</updated>
       <workItem from="1576407375843" duration="22000" />
       <workItem from="1576407430540" duration="10426000" />
-      <workItem from="1576604530726" duration="9799000" />
+      <workItem from="1576604530726" duration="10562000" />
     </task>
     <servers />
   </component>
