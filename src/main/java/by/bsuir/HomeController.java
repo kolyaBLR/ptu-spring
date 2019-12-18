@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -32,7 +33,9 @@ public class HomeController {
         if (activeUser == null) {
             return "redirect:/login";
         }
-        model.addAttribute("user", activeUser);
+        List<User> users = userService.getUsers();
+        model.addAttribute("activeUser", activeUser);
+        model.addAttribute("users", users);
         model.addAttribute("companies", companyService.findAll(activeUser.getLogin()));
         return "home";
     }

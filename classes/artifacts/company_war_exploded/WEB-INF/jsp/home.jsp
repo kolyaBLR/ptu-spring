@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div>
-        <h2>Привет ${user.login}</h2>
+        <h2>Привет ${activeUser.login}</h2>
         <div align="right"><a href="${logoutUrl}">logout</a></div>
     </div>
     <div><a href="${createCompanyUrl}">add company</a></div>
@@ -25,6 +25,17 @@
                         <input type="submit" value="удалить"/>
                     </td>
                 </form:form>
+            </tr>
+        </c:forEach>
+    </table>
+    <div height="200"></div>
+    <h3>Пользователи</h3>
+    <table>
+        <c:forEach var="user" items="${users}">
+            <tr>
+                <td>
+                    <div>-> ${user.login}</div>
+                </td>
             </tr>
         </c:forEach>
     </table>

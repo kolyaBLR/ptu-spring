@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company_show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/company_show.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +199,7 @@
       <updated>1576407373847</updated>
       <workItem from="1576407375843" duration="22000" />
       <workItem from="1576407430540" duration="10426000" />
-      <workItem from="1576604530726" duration="10562000" />
+      <workItem from="1576604530726" duration="11398000" />
     </task>
     <servers />
   </component>
