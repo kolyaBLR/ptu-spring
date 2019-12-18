@@ -7,6 +7,13 @@
 <spring:url value="/logout" var="logoutUrl"/>
 <spring:url value="company/create" var="createCompanyUrl"/>
 <spring:url value="company/show" var="showCompanyUrl"/>
+<head>
+    <script type="text/javascript">
+        ${graphScript}
+
+        ${usersGraphScript}
+    </script>
+</head>
 <body>
 <div class="container">
     <div>
@@ -40,6 +47,8 @@
         </c:forEach>
     </table>
 </div>
+<div id="chart_div"></div>
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 <jsp:include page="fragments/footer.jsp"/>
 </body>
 </html>

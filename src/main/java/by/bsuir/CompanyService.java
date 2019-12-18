@@ -76,6 +76,10 @@ public class CompanyService {
         return result;
     }
 
+    public List<Company> findAll() {
+        return companyRepository.readAll(Company.class);
+    }
+
     public void delete(int id) {
         Company company = companyRepository.read(id, Company.class);
         if (company != null) {
