@@ -40,11 +40,13 @@ public class HomeController {
         }
         List<User> users = userService.getUsers();
         List<Company> companies = companyService.findAll(activeUser.getLogin());
+        List<Company> allCompanies = companyService.findAll();
         model.addAttribute("activeUser", activeUser);
         model.addAttribute("users", users);
         model.addAttribute("companies", companies);
+        model.addAttribute("allCompanies", allCompanies);
         model.addAttribute("graphScript", getGraphScript(companies));
-        model.addAttribute("usersGraphScript", getUsersGraphScript(companyService.findAll()));
+        model.addAttribute("usersGraphScript", getUsersGraphScript(allCompanies));
         return "home";
     }
 

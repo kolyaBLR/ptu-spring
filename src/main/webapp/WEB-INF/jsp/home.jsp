@@ -18,28 +18,45 @@
 <body>
 <div class="container">
     <div>
-        <h2>Привет ${activeUser.login}</h2>
+        <h2>Привет ${activeUser.login} <a href="${createCompanyUrl}">add company</a></h2>
         <div align="right"><a href="${logoutUrl}">logout</a></div>
     </div>
-    <div><a href="${createCompanyUrl}">add company</a></div>
+    <h3>Мои компании</h3>
     <table>
         <jsp:useBean id="companies" scope="request" type="java.util.List"/>
         <c:forEach var="company" items="${companies}">
             <tr>
                 <form:form method="post" action="home" modelAttribute="company">
                     <td>
-                        <div>
-                            <a href="${showCompanyUrl}/${company.id}">${company.name}</a> стоит ${company.cost} <a
-                                href="${fileUrl}/${company.id}">Скачать файлом</a>
-                        </div>
-                        <input name="id" value="${company.id}" type="hidden"/>
+                        <a href="${showCompanyUrl}/${company.id}">${company.name}</a> стоит ${company.cost}
+                    </td>
+                    <td>
+                        <a href="${fileUrl}/${company.id}">Скачать файлом</a>
+                    </td>
+                    <td>
                         <input type="submit" value="удалить"/>
                     </td>
+                    <input name="id" value="${company.id}" type="hidden"/>
                 </form:form>
             </tr>
         </c:forEach>
     </table>
-    <div height="200"></div>
+    <h3>Все компании</h3>
+    <table>
+        <c:forEach var="comnpany1" items="${allCompanies}">
+            <tr>
+                <td>
+                    <div> ${comnpany1.name} </div>
+                </td>
+                <td>
+                    <div> ${comnpany1.cost} </div>
+                </td>
+                <td>
+                    <div> ${comnpany1.userLogin} </div>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
     <h3>Пользователи</h3>
     <table>
         <c:forEach var="user" items="${users}">
