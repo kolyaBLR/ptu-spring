@@ -7,6 +7,7 @@
 <spring:url value="/logout" var="logoutUrl"/>
 <spring:url value="company/create" var="createCompanyUrl"/>
 <spring:url value="company/show" var="showCompanyUrl"/>
+<spring:url value="/files" var="fileUrl"/>
 <head>
     <script type="text/javascript">
         ${graphScript}
@@ -27,7 +28,10 @@
             <tr>
                 <form:form method="post" action="home" modelAttribute="company">
                     <td>
-                        <div><a href="${showCompanyUrl}/${company.id}">${company.name}</a> стоит ${company.cost}</div>
+                        <div>
+                            <a href="${showCompanyUrl}/${company.id}">${company.name}</a> стоит ${company.cost} <a
+                                href="${fileUrl}/${company.id}">Скачать файлом</a>
+                        </div>
                         <input name="id" value="${company.id}" type="hidden"/>
                         <input type="submit" value="удалить"/>
                     </td>

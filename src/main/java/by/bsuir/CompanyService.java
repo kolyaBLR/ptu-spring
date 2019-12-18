@@ -65,6 +65,22 @@ public class CompanyService {
         }
     }
 
+    public CompanyModel getCompany(int companyId) {
+        CompanyModel companyModel = new CompanyModel();
+        Company company = companyRepository.read(companyId, Company.class);
+        if (company != null) {
+            companyModel.setCompany(company);
+            companyModel.setCompanyInfo(companyInfoRepository.findFirst(companyId));
+            companyModel.setPlacement(placementRepository.findFirst(companyId));
+            companyModel.setEquipment(equipmentRepository.findFirst(companyId));
+            companyModel.setProduct(productRepository.findFirst(companyId));
+            companyModel.setEmployee(employeeRepository.findFirst(companyId));
+            return companyModel;
+        } else {
+            return null;
+        }
+    }
+
     public List<Company> findAll(String login) {
         List<Company> all = companyRepository.readAll(Company.class);
         ArrayList<Company> result = new ArrayList<>();

@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40772a5a-a2c1-4590-a78a-36f81fe98025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/HomeControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/model/UserGraphModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/fragments/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/fragments/head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/classes/by/bsuir/CompanyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/company_war_exploded/WEB-INF/jsp/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/bsuir/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/bsuir/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fragments/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fragments/head.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -224,7 +222,7 @@
       <workItem from="1576407430540" duration="10426000" />
       <workItem from="1576604530726" duration="11398000" />
       <workItem from="1576674918449" duration="197000" />
-      <workItem from="1576686988308" duration="6091000" />
+      <workItem from="1576686988308" duration="9955000" />
     </task>
     <servers />
   </component>
